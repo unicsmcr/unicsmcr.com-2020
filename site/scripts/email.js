@@ -45,3 +45,19 @@ function precaptcha() {
 	grecaptcha.execute();
 	return false;
 }
+
+(function() {
+	let recaptchaTag = document.createElement('script');
+	recaptchaTag.type = 'text/javascript';
+	recaptchaTag.src = 'https://www.google.com/recaptcha/api.js';
+	let loadedRecaptcha = false;
+	function loadRecaptcha() {
+		if (loadedRecaptcha) return;
+		loadedRecaptcha = true;
+		console.log('loading reCAPTCHA');
+		document.getElementsByTagName('head')[0].appendChild(recaptchaTag);
+	}
+	for (const el of document.getElementById('email-form').children) {
+		el.addEventListener('focus', loadRecaptcha);
+	}
+})();
