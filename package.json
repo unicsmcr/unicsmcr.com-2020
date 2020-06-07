@@ -1,0 +1,36 @@
+{
+  "name": "unics-website",
+  "version": "1.0.0",
+  "description": "",
+  "devDependencies": {
+    "@sendgrid/mail": "^7.1.1",
+    "axios": "^0.19.2",
+    "clean-css": "^4.2.3",
+    "fs-extra": "^9.0.1",
+    "handlebars": "^4.7.6",
+    "html-minifier": "^4.0.0",
+    "http-server": "^0.12.3",
+    "klaw": "^3.0.0",
+    "node-fetch": "^2.6.0",
+    "pino": "^6.3.2",
+    "pino-pretty": "^4.0.0",
+    "querystring": "^0.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:events": "node scripts/facebook | pino-pretty",
+    "build:html": "node scripts/build | pino-pretty",
+    "build": "npm run build:events && npm run build:html",
+    "serve": "http-server dist -p 8889"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unicsmcr/unicsmcr.com.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/unicsmcr/unicsmcr.com/issues"
+  },
+  "homepage": "https://github.com/unicsmcr/unicsmcr.com#readme",
+  "dependencies": {}
+}

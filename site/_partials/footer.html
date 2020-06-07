@@ -1,0 +1,28 @@
+<footer id="contact" class="section">
+	<div class="container padded">
+		<h1 id="email-h1">Contact Us</h1>
+		<p id="email-p">Feel free to drop us an email using the form below!</p>
+		<form id="email-form" onSubmit="return precaptcha()">
+			<div class="g-recaptcha"
+						data-sitekey="{{RECAPTCHA_SITE_KEY}}"
+						data-callback="onSubmit"
+						data-size="invisible">
+			</div>
+			<label for="emailform_email">Your Email</label>
+			<input type="email" placeholder="your@email.com" name="email" id="emailform_email" required>
+			<label for="emailform_name">Name (optional)</label>
+			<input type="text" name="name" id="emailform_name">
+			<label for="emailform_message">Message</label>
+			<textarea name="message" id="emailform_message" placeholder="Type your message here!" required maxlength="2000" minlength="8"></textarea>
+			<input type="submit" id="email-submit" value="Send Email"></input>
+		</form>
+	</div>
+</footer>
+<section id="copyright-bar">
+	<div class="container padded">
+		<p>© 2018-2020 UniCS</p>
+		<p>This site is protected by reCAPTCHA and the Google
+			<a href="https://policies.google.com/privacy">Privacy Policy</a> and
+			<a href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
+	</div>
+</section>

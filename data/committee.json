@@ -1,0 +1,72 @@
+[
+	{
+		"name": "Zeynep Tezduyar",
+		"role": "Co-Chair",
+		"img": "zeynep"
+	},
+	{
+		"name": "Diana Irimia",
+		"role": "Co-Chair",
+		"img": "diana-i"
+	},
+	{
+		"name": "Amish Shah",
+		"role": "Dev Officer",
+		"img": "amish"
+	},
+	{
+		"name": "Teona Nikovska",
+		"role": "Graphics Officer",
+		"img": "teona"
+	},
+	{
+		"name": "Horia Gabriel Radu",
+		"role": "Events Officer",
+		"img": "horia"
+	},
+	{
+		"name": "Ali Awan",
+		"role": "Treasurer",
+		"img": "ali"
+	},
+	{
+		"name": "Holly Foster",
+		"role": "PR Officer",
+		"img": "holly"
+	},
+	{
+		"name": "Rakha Djokosoetono",
+		"role": "Secretary",
+		"img": "rakha"
+	},
+	{
+		"name": "Haikal Khairul",
+		"role": "Procurement Officer",
+		"img": "haikal"
+	},
+	{
+		"name": "Aditi Lakhotia",
+		"role": "May Ball Officer",
+		"img": "aditi"
+	},
+	{
+		"name": "Gurneet Bhatia",
+		"role": "Game Dev Head",
+		"img": "gurneet"
+	},
+	{
+		"name": "Diana Dobrescu",
+		"role": "Game Dev Head",
+		"img": "diana-d"
+	},
+	{
+		"name": "Aakash Kalantre",
+		"role": "Hackathon Director",
+		"img": "aakash"
+	},
+	{
+		"name": "Ritam Anand",
+		"role": "Hackathon Director",
+		"img": "ritam"
+	}
+]

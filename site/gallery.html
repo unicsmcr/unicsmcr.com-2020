@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> head }}
+		<title>UniCS | Gallery</title>
+		<style>
+			li#gallery-link a {
+				color: #FFCC33;
+			}
+
+			#intro {
+				background: linear-gradient(rgba(81, 0, 116, 0.8), rgba(109, 0, 157, 0.8)),
+					url(assets/gallery_cover.jpg);
+				background-position: center;
+				background-size: cover;
+				color: white;
+				clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
+			}
+
+			h1:not(:first-child) {
+				margin-top: 64px;
+			}
+
+			.album-list {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				margin: -16px;
+				flex-wrap: wrap;
+				justify-content: space-between;
+			}
+
+			.album {
+				height: 200px;
+				min-width: 300px;
+				max-width: 300px;
+				position: relative;
+				overflow: hidden;
+				flex: 1;
+				background-size: cover;
+				background-position: center;
+				margin: 16px;
+			}
+
+			.album a {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				z-index: 2;
+			}
+
+			.album:hover .album-title {
+				padding: 24px 32px;
+				background: rgb(255, 212, 84);
+			}
+
+			.album-title {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				padding: 16px 24px;
+				background: #FFCC33;
+				color: black;
+				font-size: 32px;
+				font-weight: bold;
+				transition: 100ms padding, 100ms background;
+			}
+
+			.album img {
+				pointer-events: none;
+				position: absolute;
+				width: 100%;
+				z-index: -1;
+			}
+
+			@media screen and (min-width: 960px) {
+				h1:not(:first-child) {
+					margin-top: 128px;
+				}
+			}
+		</style>
+  </head>
+  <body>
+		{{> nav }}
+		<section id="intro" class="section">
+			<div class="container padded">
+				<h1>Gallery</h1>
+				<p>Photo albums from the events that we host!</p>
+			</div>
+		</section>
+
+		<section id="sponsors" class="section">
+			<div class="container padded">
+				<h1>GreatUniHack</h1>
+				<ul class="album-list">
+					{{#gallery.guh}}
+						<li class="album" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(assets/gallery/guh/{{title}}.jpg)">
+							<a href="{{url}}" target="_blank" rel="noreferrer" aria-label="GreatUniHack {{title}} album"></a>
+							<span class="album-title">{{title}}</span>
+						</li>
+					{{/gallery.guh}}
+				</ul>
+
+
+				<h1>StudentHack</h1>
+				<ul class="album-list">
+					{{#gallery.studenthack}}
+					<li class="album" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(assets/gallery/studenthack/{{title}}.jpg)">
+						<a href="{{url}}" target="_blank" rel="noreferrer" aria-label="StudentHack {{title}} album"></a>
+						<span class="album-title">{{title}}</span>
+					</li>
+					{{/gallery.studenthack}}
+				</ul>
+			</div>
+		</section>
+		{{> footer }}
+  </body>
+</html>

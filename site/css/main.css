@@ -1,0 +1,207 @@
+body {
+	font-family: 'Inter', sans-serif;
+	margin: 0;
+	background: #f1f1f1;
+}
+
+nav {
+	background: #121010;
+	padding: 4px 0;
+	color: rgba(255, 255, 255, 0.9);
+}
+
+nav img {
+	height: 40px;
+}
+
+nav .padded {
+	display: flex;
+	align-items: center;
+}
+
+#links {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	font-weight: bold;
+	font-size: 18px;
+	flex: 1;
+}
+
+#links li {
+	display: inline-block;
+	margin-left: 24px;
+}
+
+li.right {
+	float: right;
+	font-size: 24px;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: silver;
+}
+
+.container {
+	max-width: 1344px;
+	margin: 0 auto;
+}
+
+.padded {
+	padding: 16px;
+}
+
+.section {
+	padding: 80px 0;
+	z-index: 5;
+}
+
+.section h1 {
+	font-size: 64px;
+	margin: 0 0 16px 0;
+}
+
+.section p {
+	margin: 16px 0;
+	font-size: 22px;
+	line-height: 36px;
+	justify-content: stretch;
+}
+
+footer {
+	background: linear-gradient(rgba(62, 0, 93, 0.9), rgba(62, 0, 93, 0.9)),
+		url(../assets/footer.jpg);
+	background-size: cover;
+	color: white;
+}
+
+footer label {
+	font-size: 32px;
+	font-weight: bold;
+	display: block;
+	margin: 60px 0 20px 0;
+}
+
+footer input[type=text], footer input[type=email], footer textarea {
+	background: rgba(255, 255, 255, 0.15);
+	border: 0;
+	border-bottom: 4px solid rgba(255, 255, 255, 0.3);
+	padding: 12px;
+	font-size: 20px;
+	color: white;
+	width: 100%;
+	max-width: 800px;
+	box-sizing: border-box;
+}
+
+footer input[type=submit] {
+	display: block;
+	margin-top: 40px;
+	font-size: 24px;
+	border: 0;
+	padding: 16px;
+	background: #FFCC33;
+	border-bottom: 4px solid rgb(141, 113, 30);
+	font-weight: bold;
+	font-family: 'Inter', sans-serif;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+
+footer input[type=submit]:hover {
+	background: rgb(255, 221, 117);
+}
+
+footer input:disabled {
+	background: rgb(134, 123, 91);
+}
+
+footer textarea {
+	font-family: 'Inter', sans-serif;
+	height: 260px;
+}
+
+#copyright-bar {
+	background: #1a1a1a;
+	color: #bbb;
+}
+
+#copyright-bar a {
+	color: #ddd;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#menu-icon {
+	display: none;
+}
+
+.section a {
+	color: rgb(0, 97, 187);
+	text-decoration: none;
+	font-weight: bold;
+}
+
+@media screen and (max-width: 960px) {
+	.section {
+		padding: 40px 0;
+	}
+	nav {
+		flex-direction: column;
+		background: #1a1a1a;
+	}
+	#links {
+		position: absolute;
+		display: none;
+		flex-direction: column;
+		align-items: flex-start;
+		background: #1a1a1a;
+		left: 0;
+		right: 0;
+		top: 80px;
+		z-index: 300;
+		text-align: center;
+	}
+
+	#links.opened {
+		display: block;
+	}
+
+	#links li {
+		text-align: center;
+		display: block;
+		padding: 32px 0;
+		margin-left: 0;
+		font-size: 24px;
+		float: none;
+	}
+
+	#links li.right {
+		display: inline-block;
+		padding: 32px 16px;
+	}
+
+	#menu-icon {
+		display: block;
+		font-size: 40px;
+		position: absolute;
+		top: 16px;
+		right: 16px;
+		cursor: pointer;
+	}
+	.section p {
+		font-size: 18px;
+	}
+	.section h1 {
+		font-size: 48px;
+	}
+}
+
+.grecaptcha-badge { 
+	visibility: hidden;
+}
