@@ -8,6 +8,7 @@
 	- `SENDGRID_API_KEY` - required for a functioning "Contact Us" email form
 	- `RECAPTCHA_SITE_KEY` - the public-facing reCAPTCHA site key
 	- `RECAPTCHA_SITE_SECRET` - the reCAPTCHA secret used to validate requests
+	- `UNICS_EMAIL` - the email address to send email to
 - Install dependencies - `npm i`
 - Build the website - `npm run build`
 - Serve the website (doesn't support email form) - `npx http-server dist`

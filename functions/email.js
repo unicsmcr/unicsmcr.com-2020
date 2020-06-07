@@ -66,7 +66,7 @@ exports.handler = async (event, _context) => {
   // After recaptcha verification, send the email
   sgMail.setApiKey(SENDGRID_API_KEY);
   const msg = {
-    to: 'contact@unicsmcr.com',
+    to: UNICS_EMAIL,
     from: email,
     subject: `${name}: ${email}`,
     html: message,
