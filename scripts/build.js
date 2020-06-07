@@ -59,13 +59,17 @@ async function build() {
 		committee: require('../data/committee.json'),
 		gallery: require('../data/gallery.json'),
 		events: require('../data/events.json'),
-		RECAPTCHA_SITE_KEY: "6LcrhOYUAAAAAPkMYoCKjkZm0lxuJJx4E19eJfIe"
+		RECAPTCHA_SITE_KEY: process.env.RECAPTCHA_SITE_KEY,
+		year: new Date().getFullYear()
 	};
+	if (!data.RECAPTCHA_SITE_KEY) {
+		logger.warn('RECAPTCHA_SITE_KEY is not set in the env variables - the email form will not work');
+	}
 	logger.info('Loaded data');
 
 	// Empty dist
 	// fs.emptyDirSync('dist/');
-	logger.info('Emptied dist/');
+	// logger.info('Emptied dist/');
 	
 	// Copy site files
 	fs.copySync('site', 'dist', {
