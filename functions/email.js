@@ -34,7 +34,7 @@ exports.handler = async (event, _context) => {
     };
   }
 
-  const { SITE_RECAPTCHA_SECRET, SENDGRID_API_KEY, UNICS_EMAIL } = process.env;
+  const { RECAPTCHA_SITE_SECRET, SENDGRID_API_KEY, UNICS_EMAIL } = process.env;
 
   // Parse the request body
   let body = {};
@@ -53,7 +53,7 @@ exports.handler = async (event, _context) => {
         Accept: 'application/json',
         'Content-Type': 'application/x-www-form-urlencoded',
       },
-      body: `secret=${SITE_RECAPTCHA_SECRET}&response=${captcha}`,
+      body: `secret=${RECAPTCHA_SITE_SECRET}&response=${captcha}`,
     });
   } catch (err) {
     return { ...failResponse, body: 'Failed to validate captcha' };
