@@ -22,7 +22,8 @@
     "build:events": "node scripts/facebook | pino-pretty",
     "build:html": "node scripts/build | pino-pretty",
     "build": "npm run build:events && npm run build:html",
-    "build:live": "nodemon scripts/build | pino-pretty"
+    "build:live": "nodemon scripts/build | pino-pretty",
+    "serve": "http-server dist -p 8080"
   },
   "repository": {
     "type": "git",
