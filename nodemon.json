@@ -1,0 +1,7 @@
+{
+	"ignore": ["dist/*", "logs/*"],
+	"watch": ["site", "data"],
+	"exec": "node scripts/build",
+	"ext": "*",
+	"delay": "1000"
+}

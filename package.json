@@ -22,7 +22,7 @@
     "build:events": "node scripts/facebook | pino-pretty",
     "build:html": "node scripts/build | pino-pretty",
     "build": "npm run build:events && npm run build:html",
-    "serve": "http-server dist -p 8080"
+    "build:live": "nodemon scripts/build | pino-pretty"
   },
   "repository": {
     "type": "git",
@@ -33,9 +33,5 @@
     "url": "https://github.com/unicsmcr/unicsmcr.com/issues"
   },
   "homepage": "https://github.com/unicsmcr/unicsmcr.com#readme",
-  "dependencies": {},
-  "nodemonConfig": {
-    "ignore": ["dist/*", ".netlify/*"],
-    "delay": 1000
-  }
+  "dependencies": {}
 }
