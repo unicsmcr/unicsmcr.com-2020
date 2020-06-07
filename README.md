@@ -1,5 +1,16 @@
 # UniCS Website
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9150af20-1025-42c7-991f-51a8c5aef3c3/deploy-status)](https://app.netlify.com/sites/unicsmcr/deploys)
+![Build](https://github.com/unicsmcr/unicsmcr.com/workflows/Build/badge.svg?branch=master)
+
+The website for the UniCS society!
+
+This project extends some of the work done by the [2019/2020 committee.](https://github.com/unicsmcr/unicsmcr.com-2019)
+
+## Contributing
+
+See the [contribution guide](./CONTRIBUTING.md) to find out how to get started and contribute to the website!
+
 ## License
 
 > The MIT License (MIT)
