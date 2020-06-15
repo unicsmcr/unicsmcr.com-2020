@@ -9,13 +9,13 @@
     "fs-extra": "^9.0.1",
     "handlebars": "^4.7.6",
     "html-minifier": "^4.0.0",
-    "http-server": "^0.12.3",
     "klaw": "^3.0.0",
     "node-fetch": "^2.6.0",
     "nodemon": "^2.0.4",
     "pino": "^6.3.2",
     "pino-pretty": "^4.0.0",
-    "querystring": "^0.2.0"
+    "querystring": "^0.2.0",
+    "serve": "^11.3.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -23,7 +23,7 @@
     "build:html": "node scripts/build | pino-pretty",
     "build": "npm run build:events && npm run build:html",
     "build:live": "nodemon scripts/build | pino-pretty",
-    "serve": "http-server dist -p 8080"
+    "serve": "serve dist -p 8080"
   },
   "repository": {
     "type": "git",
