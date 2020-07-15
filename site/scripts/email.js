@@ -17,7 +17,8 @@ function onSubmit(token) {
 				name: data.get('name'),
 				email: data.get('email'),
 				message: data.get('message'),
-				'g-recaptcha-response': data.get('g-recaptcha-response')
+				'g-recaptcha-response': data.get('g-recaptcha-response'),
+				to: 'unics:core'
 			})
 	})
 	.then(res => {

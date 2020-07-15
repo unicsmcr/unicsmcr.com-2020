@@ -34,7 +34,7 @@ exports.handler = async (event, _context) => {
     };
   }
 
-  const { RECAPTCHA_SITE_SECRET, SENDGRID_API_KEY, UNICS_EMAIL } = process.env;
+  const { RECAPTCHA_SITE_SECRET, SENDGRID_API_KEY, UNICS_EMAIL, UNICS_GAME_DEV_EMAIL } = process.env;
 
   // Parse the request body
   let body = {};
@@ -43,7 +43,16 @@ exports.handler = async (event, _context) => {
   } catch (e) {
     body = querystring.parse(event.body);
   }
-  const { email, name, message, 'g-recaptcha-response': captcha } = body;
+  const { email, name, message, 'g-recaptcha-response': captcha, to } = body;
+  // Verify the 'to'
+  let toEmail;
+  if (to === 'unics:core') {
+    toEmail = UNICS_EMAIL;
+  } else if (to === 'unics:game-dev') {
+    toEmail = UNICS_GAME_DEV_EMAIL;
+  } else {
+    return { statusCode: 400, body: 'Invalid UniCS subteam selection' };
+  }
   // Verify the captcha
   let response;
   try {
@@ -66,7 +75,7 @@ exports.handler = async (event, _context) => {
   // After recaptcha verification, send the email
   sgMail.setApiKey(SENDGRID_API_KEY);
   const msg = {
-    to: UNICS_EMAIL,
+    to: toEmail,
     from: email,
     subject: `${name}: ${email}`,
     html: message,
