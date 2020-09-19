@@ -7,11 +7,15 @@
 			.gold {
 				color: #FFCC33;
 			}
+			.headerHolder {
+				background-color: black;
+			}
 			header {
 				background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
-					url(assets/cover.jpg);
+					url(assets/cover.png);
 				background-position: center;
-				background-size: cover;
+				background-size: contain;
+				background-repeat: no-repeat;
 			}
 			header h1, header .subtitle {
 				display: inline-block;
@@ -185,12 +189,14 @@
   </head>
   <body>
 		{{> nav }}
-		<header id="hero" class="section">
-			<div class="container padded">
-				<h1>Uni<span class="gold">CS</span></h1><br />
-				<p class="subtitle">University of Manchester<br />Computer Science Society</p>
-			</div>
-		</header>
+		<div class="headerHolder">
+			<header id="hero" class="section">
+				<div class="container padded">
+					<h1>Uni<span class="gold">CS</span></h1><br />
+					<p class="subtitle">University of Manchester<br />Computer Science Society</p>
+				</div>
+			</header>
+		</div>
 
 		<section id="intro" class="section">
 			<div class="container padded">
