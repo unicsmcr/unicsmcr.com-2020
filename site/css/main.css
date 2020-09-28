@@ -147,7 +147,13 @@ footer textarea {
 	font-weight: bold;
 }
 
-@media screen and (max-width: 960px) {
+#kb-logo {
+	height: 32px;
+	width: 32px;
+	margin: -8px 0 -6px 0;
+}
+
+@media screen and (max-width: 1020px) {
 	.section {
 		padding: 40px 0;
 	}
