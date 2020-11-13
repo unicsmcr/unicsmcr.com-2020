@@ -60,13 +60,18 @@
 		"img": "diana-d"
 	},
 	{
-		"name": "Aakash Kalantre",
-		"role": "Hackathon Director",
-		"img": "aakash"
-	},
-	{
 		"name": "Ritam Anand",
 		"role": "Hackathon Director",
 		"img": "ritam"
+	},
+	{
+		"name": "Caitlin Fotheringham",
+		"role": "Hackathon Director",
+		"img": "caitlin"
+	},
+	{
+		"name": "Aakash Kalantre",
+		"role": "Hackathon Director",
+		"img": "aakash"
 	}
 ]
