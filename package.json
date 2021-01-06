@@ -4,7 +4,7 @@
   "description": "",
   "devDependencies": {
     "@sendgrid/mail": "^7.1.1",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "clean-css": "^4.2.3",
     "fs-extra": "^9.0.1",
     "handlebars": "^4.7.6",
